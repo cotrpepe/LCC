@@ -8,7 +8,7 @@ Object.defineProperty(exports, "MAX_STRING_LENGTH", {
 });
 
 Object.defineProperty(exports, "HELP_URL", {
-    value:        'http://www.google.co.jp',
+    value:        'https://github.com/cotrpepe/LCC',
     enumerable:   true,
     writable:     false,
     configurable: false

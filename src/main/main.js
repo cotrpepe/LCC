@@ -13,7 +13,11 @@ var trayIcon = null;
 app.on('ready', function() {
 	mainWindow = require('./main-window-init.js').createMainWindow();
 	trayIcon = require('./tray.js').createTray();
-	require('./menu.js').createMenu();
+
+	if (process.platform == 'darwin') {
+		require('./menu.js').createMenu();
+	}
+	
 	shortcut.registerQuit();
 });
 

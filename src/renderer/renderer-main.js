@@ -9,9 +9,8 @@ mainWindow.printCalculating();
 var prevLen = string.getLengthInCrossPlatform(clipboard.readText());
 mainWindow.update(prevLen);
 
-var curLen = 0;
 setInterval(function() {
-  curLen = string.getLengthInCrossPlatform(clipboard.readText());
+  var curLen = string.getLengthInCrossPlatform(clipboard.readText());
 
   if (prevLen != curLen) {
     prevLen = curLen;

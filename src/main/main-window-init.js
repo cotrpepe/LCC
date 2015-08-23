@@ -1,5 +1,6 @@
 'use strict';
 
+var app = require('app');
 var path = require('path');
 var BrowserWindow = require('browser-window');
 
@@ -25,7 +26,7 @@ module.exports.createMainWindow = function() {
 	mainWindow.loadUrl('file://' + htmlPath);
 
 	mainWindow.on('closed', function() {
-		mainWindow = null;
+		app.quit();
 	});
 
 	return mainWindow;

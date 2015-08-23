@@ -12,7 +12,7 @@ Mac/Windows
 
 # Binaries
 
-Download the latest ![LCC release]()
+Download the latest [LCC release](https://github.com/cotrpepe/LCC/releases/tag/v0.1.0)
 
 
 # How to use LCC

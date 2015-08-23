@@ -1,0 +1,22 @@
+html, body, div {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 255, 0);
+  font-size: 15vh;
+  font-family: Arial;
+  text-align: center;
+  -webkit-app-region: drag;
+}
+
+#label{
+  margin-top: 15px;
+}
+
+#strLen {
+  margin-top: 6px;
+}

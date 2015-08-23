@@ -1,0 +1,18 @@
+{
+  "name": "LCC",
+  "version": "0.1.0",
+  "description": "Lightweight Character Counter",
+  "main": "./src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "mocha",
+    "package": "electron-packager . LCC --platform=darwin,win32 --arch=all --version=0.30.4 --icon=./image/icon.icns --out=build --overwrite"
+  },
+  "author": "Kohei Tsuzuki",
+  "license": "MIT",
+  "devDependencies": {
+    "electron-prebuilt": "^0.30.4",
+    "electron-packager": "^5.0.2",
+    "mocha": "^2.2.5"
+  }
+}

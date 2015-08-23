@@ -17,7 +17,7 @@ app.on('ready', function() {
 	if (process.platform == 'darwin') {
 		require('./menu.js').createMenu();
 	}
-	
+
 	shortcut.registerQuit();
 });
 

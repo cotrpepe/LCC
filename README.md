@@ -1,6 +1,6 @@
 ![img](./image/readme/logo.png)
 
-# LCC
+[![Build Status](https://travis-ci.org/cotrpepe/LCC.svg?branch=master)](https://travis-ci.org/cotrpepe/LCC)
 
 LCC is a Lightweigt Character Counter based on [Electron](http://electron.atom.io).
 

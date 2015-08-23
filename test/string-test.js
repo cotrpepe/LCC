@@ -27,7 +27,7 @@ describe('string.js', function() {
 
       str = '   ';
       assert.equal(3, string.getLengthInCrossPlatform(str));
-		});
+    });
 
     it('should return string length when an alphabet', function() {
       var str = 'a';

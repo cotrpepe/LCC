@@ -5,7 +5,7 @@ var constants = require('../src/util/constants.js');
 describe('string.js', function() {
   describe('isTooLong()', function() {
     it('should return true when a string is too long', function() {
-			assert.equal(true, string.isTooLong(constants.MAX_STRING_LENGTH + 1));
+      assert.equal(true, string.isTooLong(constants.MAX_STRING_LENGTH + 1));
     });
 
     it('should return false when a string is not too long', function() {
@@ -19,58 +19,58 @@ describe('string.js', function() {
     it('should return zero when a string is nothing', function() {
       var str = '';
       assert.equal(0, string.getLengthInCrossPlatform(str));
-		});
+    });
 
-		it('should return string length when a space', function() {
-      str = ' ';
+    it('should return string length when a space', function() {
+      var str = ' ';
       assert.equal(1, string.getLengthInCrossPlatform(str));
 
-			str = '   ';
+      str = '   ';
       assert.equal(3, string.getLengthInCrossPlatform(str));
 		});
 
-		it('should return string length when an alphabet', function() {
-      str = 'a';
+    it('should return string length when an alphabet', function() {
+      var str = 'a';
       assert.equal(1, string.getLengthInCrossPlatform(str));
 
-			str = 'xyz';
+      str = 'xyz';
       assert.equal(3, string.getLengthInCrossPlatform(str));
-		});
+    });
 
-		it('should return string length when Japanese', function() {
-      str = 'あ';
+    it('should return string length when Japanese', function() {
+      var str = 'あ';
       assert.equal(1, string.getLengthInCrossPlatform(str));
 
-			str = '朝昼夜';
+      str = '朝昼夜';
       assert.equal(3, string.getLengthInCrossPlatform(str));
-		});
+    });
 
-		it('should return string length when LF', function() {
-      str = '\n';
+    it('should return string length when LF', function() {
+      var str = '\n';
       assert.equal(1, string.getLengthInCrossPlatform(str));
 
-			str = '\n\n\n';
+      str = '\n\n\n';
       assert.equal(3, string.getLengthInCrossPlatform(str));
-		});
+    });
 
-		it('should return string length when CRLF', function() {
-      str = '\r\n';
+    it('should return string length when CRLF', function() {
+      var str = '\r\n';
       assert.equal(1, string.getLengthInCrossPlatform(str));
 
-			str = '\r\n\r\n\r\n';
+      str = '\r\n\r\n\r\n';
       assert.equal(3, string.getLengthInCrossPlatform(str));
-		});
+    });
 
-		it('should return string length when TAB', function() {
-      str = '\t';
+    it('should return string length when TAB', function() {
+      var str = '\t';
       assert.equal(1, string.getLengthInCrossPlatform(str));
 
-			str = '\t\t\t';
+      str = '\t\t\t';
       assert.equal(3, string.getLengthInCrossPlatform(str));
-		});
+    });
 
-		it('should return string length when various strings', function() {
-      str = '1\na\nあ\n \n\t\n';
+    it('should return string length when various strings', function() {
+      var str = '1\na\nあ\n \n\t\n';
       assert.equal(10, string.getLengthInCrossPlatform(str));
 
       str = '1\r\na\r\nあ\r\n \r\n\t\r\n';

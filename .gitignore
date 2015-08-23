@@ -31,6 +31,5 @@ node_modules
 
 # My Settings
 .DS_Store
-build
 dev
 *.svg

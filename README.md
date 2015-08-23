@@ -57,22 +57,22 @@ The max character length is 99,999,999.
 
 1. Install [node.js](https://nodejs.org)
 2. Download ZIP or clone the repository
-3. `npm install` to install npm package
+3. `$ npm install` to install npm packages
 
 
 ## Run
 
-`npm start`
+`$ npm start`
 
 
 ## Test
 
-`npm test`
+`$ npm test`
 
 
 ## Build binaries
 
-`npm run package`
+`$ npm run package`
 
 
 # License

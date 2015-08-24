@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports.addThousandsSeparator = function(number) {
-	// This regular expression is based on the answer of Stack overflow
+	// This regular expression is based on the answer of Stack Overflow
 	// http://stackoverflow.com/questions/2901102/how-to-print-a-number-
 	// with-commas-as-thousands-separators-in-javascript
 	return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');

@@ -17,64 +17,42 @@ describe('string.js', function() {
 
   describe('getLengthInCrossPlatform()', function() {
     it('should return zero when a string is nothing', function() {
-      var str = '';
-      assert.equal(0, string.getLengthInCrossPlatform(str));
+      assert.equal(0, string.getLengthInCrossPlatform(''));
     });
 
     it('should return string length when a space', function() {
-      var str = ' ';
-      assert.equal(1, string.getLengthInCrossPlatform(str));
-
-      str = '   ';
-      assert.equal(3, string.getLengthInCrossPlatform(str));
+      assert.equal(1, string.getLengthInCrossPlatform(' '));
+      assert.equal(3, string.getLengthInCrossPlatform('   '));
     });
 
     it('should return string length when an alphabet', function() {
-      var str = 'a';
-      assert.equal(1, string.getLengthInCrossPlatform(str));
-
-      str = 'xyz';
-      assert.equal(3, string.getLengthInCrossPlatform(str));
+      assert.equal(1, string.getLengthInCrossPlatform('a'));
+      assert.equal(3, string.getLengthInCrossPlatform('xyz'));
     });
 
     it('should return string length when Japanese', function() {
-      var str = 'あ';
-      assert.equal(1, string.getLengthInCrossPlatform(str));
-
-      str = '朝昼夜';
-      assert.equal(3, string.getLengthInCrossPlatform(str));
+      assert.equal(1, string.getLengthInCrossPlatform('あ'));
+      assert.equal(3, string.getLengthInCrossPlatform('朝昼夜'));
     });
 
     it('should return string length when LF', function() {
-      var str = '\n';
-      assert.equal(1, string.getLengthInCrossPlatform(str));
-
-      str = '\n\n\n';
-      assert.equal(3, string.getLengthInCrossPlatform(str));
+      assert.equal(1, string.getLengthInCrossPlatform('\n'));
+      assert.equal(3, string.getLengthInCrossPlatform('\n\n\n'));
     });
 
     it('should return string length when CRLF', function() {
-      var str = '\r\n';
-      assert.equal(1, string.getLengthInCrossPlatform(str));
-
-      str = '\r\n\r\n\r\n';
-      assert.equal(3, string.getLengthInCrossPlatform(str));
+      assert.equal(1, string.getLengthInCrossPlatform('\r\n'));
+      assert.equal(3, string.getLengthInCrossPlatform('\r\n\r\n\r\n'));
     });
 
     it('should return string length when TAB', function() {
-      var str = '\t';
-      assert.equal(1, string.getLengthInCrossPlatform(str));
-
-      str = '\t\t\t';
-      assert.equal(3, string.getLengthInCrossPlatform(str));
+      assert.equal(1, string.getLengthInCrossPlatform('\t'));
+      assert.equal(3, string.getLengthInCrossPlatform('\t\t\t'));
     });
 
     it('should return string length when various strings', function() {
-      var str = '1\na\nあ\n \n\t\n';
-      assert.equal(10, string.getLengthInCrossPlatform(str));
-
-      str = '1\r\na\r\nあ\r\n \r\n\t\r\n';
-      assert.equal(10, string.getLengthInCrossPlatform(str));
+      assert.equal(10, string.getLengthInCrossPlatform('1\na\nあ\n \n\t\n'));
+      assert.equal(10, string.getLengthInCrossPlatform('1\r\na\r\nあ\r\n \r\n\t\r\n'));
     });
   });
 });
